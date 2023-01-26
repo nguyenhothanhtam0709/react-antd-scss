@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styles from "./App.module.scss";
 
+const MainLayout = lazy(() => import("./layouts/Main"));
 const LoginPage = lazy(() => import("./pages/LoginPage"));
 const SignupPage = lazy(() => import("./pages/SignupPage"));
 
@@ -10,6 +11,7 @@ function App() {
     <BrowserRouter>
       <Suspense fallback={<h1>Loading</h1>}>
         <Routes>
+          <Route path="/" element={<MainLayout />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
         </Routes>

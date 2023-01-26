@@ -1,14 +1,17 @@
 @use "@common/styles/media-queries.scss";
 
 .mainContainer {
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .formContainer {
   width: 35vw;
   background-color: white;
   padding: 20px;
+  border-radius: 15px;
 
   @include media-queries.lt-md {
     width: 50vw;
