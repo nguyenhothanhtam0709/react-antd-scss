@@ -4,7 +4,7 @@ import React from "react";
 import type { FC } from "react";
 import styles from "./styles.module.scss";
 
-export const SignupForm: FC = () => {
+const SignupForm: FC = () => {
   const onFinish = () => {};
   const onFinishFailed = () => {};
 
@@ -74,3 +74,4 @@ export const SignupForm: FC = () => {
     </Form>
   );
 };
+export default SignupForm;

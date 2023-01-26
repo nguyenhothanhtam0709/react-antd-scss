@@ -9,10 +9,7 @@ type Props = {
   title: string;
 };
 
-export const AuthLayout: FC<PropsWithChildren<Props>> = ({
-  children,
-  title,
-}) => {
+const AuthLayout: FC<PropsWithChildren<Props>> = ({ children, title }) => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.formContainer}>
@@ -22,3 +19,4 @@ export const AuthLayout: FC<PropsWithChildren<Props>> = ({
     </div>
   );
 };
+export default AuthLayout;

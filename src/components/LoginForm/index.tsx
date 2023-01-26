@@ -3,7 +3,7 @@ import React from "react";
 import type { FC } from "react";
 import styles from "./styles.module.scss";
 
-export const LoginForm: FC = () => {
+const LoginForm: FC = () => {
   const onFinish = () => {};
   const onFinishFailed = () => {};
 
@@ -37,3 +37,4 @@ export const LoginForm: FC = () => {
     </Form>
   );
 };
+export default LoginForm;

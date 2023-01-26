@@ -1,8 +1,8 @@
 import React from "react";
 import type { FC } from "react";
 import { Link } from "react-router-dom";
-import { LoginForm } from "@components/LoginForm";
-import { AuthLayout } from "@layouts/Auth";
+import LoginForm from "@components/LoginForm";
+import AuthLayout from "@layouts/Auth";
 import styles from "./styles.module.scss";
 
 const LoginPage: FC = () => {
