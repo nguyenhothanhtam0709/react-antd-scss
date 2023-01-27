@@ -1,0 +1,21 @@
+.navMenu {
+  width: 40vh;
+  display: flex;
+  justify-content: end;
+}
+
+.navIcon {
+  color: black;
+}
+
+.navBtnUser {
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+
+.navBtnLogout {
+  &:hover {
+    background-color: transparent !important;
+  }
+}

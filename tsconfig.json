@@ -19,8 +19,11 @@
       "@components/*": ["./src/components/*"],
       "@common/*": ["./src/common/*"],
       "@layouts/*": ["./src/layouts/*"],
-      "@pages/*": ["./src/pages/*"]
-    }
+      "@pages/*": ["./src/pages/*"],
+      "@redux/*": ["./src/redux/*"],
+      "@api/*": ["./src/api/*"]
+    },
+    "typeRoots": ["./src/@types"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

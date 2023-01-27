@@ -1,10 +1,18 @@
 import { Button, Checkbox, Form, Input } from "antd";
 import React from "react";
 import type { FC } from "react";
+import { useNavigate } from "react-router-dom";
+import { loginAction } from "@redux/actions";
+import { useAppDispatch } from "@redux/store";
 import styles from "./styles.module.scss";
 
 const LoginForm: FC = () => {
-  const onFinish = () => {};
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
+  const onFinish = (value: LoginReqData) => {
+    dispatch(loginAction({ ...value, navigate }));
+  };
   const onFinishFailed = () => {};
 
   return (

@@ -14,10 +14,10 @@
   border-radius: 3vh;
   background-color: white !important;
   display: flex;
+  justify-content: space-between;
 }
 
 .logoContainer {
-  width: 100%;
   display: flex;
   align-items: center;
   color: black;
@@ -25,12 +25,6 @@
 
 .logo {
   font-size: 40px;
-}
-
-.navMenu {
-  width: 40vh;
-  display: flex;
-  justify-content: end;
 }
 
 .contentContainer {

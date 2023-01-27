@@ -1,6 +1,7 @@
 import React from "react";
 import type { FC } from "react";
 import { Link } from "react-router-dom";
+import { LOGIN_ROUTE } from "@common/constants/router";
 import SignupForm from "@components/SignupForm";
 import AuthLayout from "@layouts/Auth";
 import MainLayout from "@layouts/Main";
@@ -12,7 +13,7 @@ const SignupPage: FC = () => {
       <AuthLayout title="Signup">
         <SignupForm />
         <div className={styles.anchor}>
-          <Link className={styles.link} to={"/login"}>
+          <Link className={styles.link} to={LOGIN_ROUTE}>
             Already have an account? Login
           </Link>
         </div>

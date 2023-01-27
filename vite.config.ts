@@ -8,6 +8,8 @@ const resolvedAlias = Object.fromEntries(
     ["@layouts", "./src/layouts"],
     ["@pages", "./src/pages"],
     ["@common", "./src/common"],
+    ["@redux", "./src/redux"],
+    ["@api", "./src/api"],
   ].map((value) => [
     value[0],
     fileURLToPath(new URL(value[1], import.meta.url)),
@@ -20,4 +22,5 @@ export default defineConfig({
   resolve: {
     alias: resolvedAlias,
   },
+  envDir: "./env",
 });
