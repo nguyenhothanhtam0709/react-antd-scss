@@ -13,6 +13,11 @@ export const login = async (data: LoginReqData) => {
   } as AuthData;
 };
 
-export const signup = (data: SignupReqData) => {
-  return http.post(SIGNUP_API_ENDPOINT, data);
+export const signup = async (data: SignupFormData) => {
+  const res = await http.post(SIGNUP_API_ENDPOINT, data);
+  const { result, token } = res.data;
+  return {
+    user: result,
+    token,
+  } as AuthData;
 };

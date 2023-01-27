@@ -2,15 +2,28 @@ import { Button, Col, Form, Input, Row } from "antd";
 import type { RuleObject } from "rc-field-form/lib/interface";
 import React from "react";
 import type { FC } from "react";
+import { useNavigate } from "react-router-dom";
+import { signup } from "@api/auth";
+import { loginAction } from "@redux/actions";
+import { useAppDispatch } from "@redux/store";
 import styles from "./styles.module.scss";
 
 const SignupForm: FC = () => {
-  const onFinish = () => {};
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+
+  const onFinish = (value: SignupFormData) => {
+    signup(value).then((result) => {
+      if (result.user) {
+        dispatch(loginAction({ ...value, navigate }));
+      }
+    });
+  };
   const onFinishFailed = () => {};
 
   return (
     <Form
-      name="Signup"
+      name="signup"
       size="large"
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
@@ -58,7 +71,7 @@ const SignupForm: FC = () => {
               if (value && value !== getFieldValue("password")) {
                 return Promise.reject("Must be equal to password");
               }
-              Promise.resolve();
+              return Promise.resolve();
             },
           }),
         ]}

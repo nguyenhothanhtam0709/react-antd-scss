@@ -3,9 +3,12 @@ declare type LoginReqData = {
   password: string;
 };
 
-declare type SignupReqData = {
+declare type SignupFormData = {
   email: string;
   password: string;
+  confirmPassword: string;
+  firstName: string;
+  lastName: string;
 };
 
 declare type UserData = {
